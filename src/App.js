@@ -17,13 +17,11 @@ class Count extends React.Component {
   }
   increment() {
     // Increment count by 1
-    this.useState({
-      count: this.state.count + 1
-    })
+    this.setState(({count}) => ({count: count + 1}))
   }
   decrement() {
     // Decrement count by 1
-    this.useState({count: this.state.count - 1})
+    this.setState(({count}) => ({count: count - 1}))
   }
   render() {
     return (
