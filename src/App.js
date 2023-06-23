@@ -12,12 +12,18 @@ class Count extends React.Component {
     this.state = {
       count: 0,
     };
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
   }
   increment() {
     // Increment count by 1
+    this.useState({
+      count: this.state.count + 1
+    })
   }
   decrement() {
     // Decrement count by 1
+    this.useState({count: this.state.count - 1})
   }
   render() {
     return (
