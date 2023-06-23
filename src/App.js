@@ -20,8 +20,11 @@ class Count extends React.Component {
     this.setState(({count}) => ({count: count + 1}))
   }
   decrement() {
-    // Decrement count by 1
-    this.setState(({count}) => ({count: count - 1}))
+    this.setState(({ count }) => {
+      return {
+        count: count - 1
+      };
+    });
   }
   render() {
     return (
